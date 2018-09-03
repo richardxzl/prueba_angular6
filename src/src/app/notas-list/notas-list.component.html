@@ -1,0 +1,18 @@
+<h3 align="center">Listado de Notas</h3>
+
+<div>
+    <table class="table table-hover table-responsive-md">
+      <thead class="thead-dark">
+        <tr>
+          <th>Titulo</th>
+          <th>Contenido</th>
+          <th>Acciones</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let nota of notas">
+          <td> {{ nota.title }} </td>
+          <td> {{ nota.content }} </td>
+          <td> <a (click)="getNotaById(nota.id)"><i class="fas fa-address-book" data-toggle="tooltip" data-placement="bottom" title="Editar"></i></a>&nbsp; <a href="" (click)="deleteNotas(nota.id)"><i class="fas fa-address-book" data-toggle="tooltip" data-placement="bottom" title="Eliminar"></i></a> </td>
+        </tr>
+      </table> 
+</div>
